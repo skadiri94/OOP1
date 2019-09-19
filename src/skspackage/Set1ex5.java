@@ -14,18 +14,27 @@ public class Set1ex5 {
 
 
         float a = 1,b = 6,c = -16;
-        double x1,x2,x;
+        double x1,x2,xFirst,xSecond;
+        String result="";
 
         //The formular for x which can be either in - or +
 
         x1 = (-b + Math.sqrt((b*b) - (4*a *c)))/ (2*a);
         x2 = (-b - Math.sqrt((b*b) - (4*a *c)))/ (2*a);
 
-        x = (x2*x2)+ 6* x2 -16;
+        //The equation test
+        xFirst = (x2*x2)+ 6* x2 -16;
+        xSecond = (x1*x1)+ 6* x1 -16;
+
+        if(xFirst == xSecond)
+            result = "The answer is 0 hence equations is correct";
+        else
+            result = "The answer is not 0 hence equations is incorrect";
+
 
         //textArea.append(String.format("%.2f\n%.2f",x1,x2));
 
-        textArea.append(String.format("\nChecking Roots Answer is %.2f",x));
+        textArea.append(result);
 
         JOptionPane.showMessageDialog(null,  textArea , "Distance", JOptionPane.INFORMATION_MESSAGE);
 
