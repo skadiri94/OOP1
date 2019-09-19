@@ -14,11 +14,18 @@ public class Set1ex5 {
 
 
         float a = 1,b = 6,c = -16;
-        double x;
+        double x1,x2,x;
 
-        x = -b + Math.sqrt((b*b) - (4*a *c)) / 2* a;
+        //The formular for x which can be either in - or +
 
-        textArea.append(String.format("%.2f",x));
+        x1 = (-b + Math.sqrt((b*b) - (4*a *c)))/ (2*a);
+        x2 = (-b - Math.sqrt((b*b) - (4*a *c)))/ (2*a);
+
+        x = (x2*x2)+ 6* x2 -16;
+
+        //textArea.append(String.format("%.2f\n%.2f",x1,x2));
+
+        textArea.append(String.format("\nChecking Roots Answer is %.2f",x));
 
         JOptionPane.showMessageDialog(null,  textArea , "Distance", JOptionPane.INFORMATION_MESSAGE);
 
