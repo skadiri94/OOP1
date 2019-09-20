@@ -1,4 +1,4 @@
-package skspackage;
+package com.skspackage.problemset;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,7 +14,7 @@ public class Set1ex6 {
 
 
         for (int i = 1; i <= 15; i++) {
-            int numCube = MyMethods.cube(i);
+            int numCube = MyMethods.xCube(i);
 
             textArea.append(String.format("%d%20d\n", i, numCube));
 

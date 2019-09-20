@@ -1,4 +1,4 @@
-package skspackage;
+package com.skspackage.problemset;
 
 import javax.swing.*;
 

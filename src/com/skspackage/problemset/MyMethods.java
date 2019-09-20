@@ -1,14 +1,11 @@
-package skspackage;
+package com.skspackage.problemset;
 
 public class MyMethods {
 
-    public static void main (String[]args) {
 
 
-    }
 
-
-    public static int cube(int a){
+    private static int cube(int a){
 
         return a * a * a;
 
@@ -20,5 +17,10 @@ public class MyMethods {
         return a % 2 == 0;
     }
 
+    public static int xCube(int a){
+        int x = cube(a);
+
+        return x;
+    }
 
 }

@@ -1,4 +1,4 @@
-package skspackage;
+package com.skspackage.problemset;
 
 public class FirstCalss {
 
