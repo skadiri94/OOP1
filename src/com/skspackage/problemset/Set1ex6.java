@@ -12,7 +12,7 @@ public class Set1ex6 {
         textArea.setFont(textFont);
         textArea.setText(String.format("%-20s%3s\n%-20s%3s\n", "Number", "Cube", "-----", "-----"));
 
-
+            // for loops
         for (int i = 1; i <= 15; i++) {
             int numCube = MyMethods.xCube(i);
 
