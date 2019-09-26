@@ -13,83 +13,63 @@ public class Message {
      //the no argument constructions method begins here.
      public Message(){
 
-      this.title = "No Title";
-      this.price = 0;
-      this.ISBN =  "";
-      this.numberOfPages = 0;
+      this("No recipeint","No Sender","No Message");
 
      }//End of No-argument constructor method.
 
     //the multiple argument constructor
-     public Message(String title, float price, String isbn, int numberOfPages){
+     public Message(String recipient, String sender, String message){
 
-         setTitle(title);
-         setPrice(price);
-         setISBN(isbn);
-         setNumberOfPages(numberOfPages);
+         setRecipient(recipient);
+         setSender(sender);
+         setMessage(message);
 
+    }
 
+    public Message(String recipient, String sender){
+
+        setRecipient(recipient);
+        setSender(sender);
+        setMessage("");
 
     }
 
     //the beginning of accessor methods.
-    public String getTitle(){
+    public String getRecipient(){ return recipient;}
 
-         //return JOptionPane.showInputDialog(null, "Please Enter the Title: \n" , "Book Title",JOptionPane.INFORMATION_MESSAGE);
-        return title;
-    }
+    public String getSender(){ return sender; }
 
-    public float getPrice(){
+    public String getMessage(){return message; }
 
-        //return Float.parseFloat(JOptionPane.showInputDialog(null, "Please Enter Price: \n" , "Book Price",JOptionPane.INFORMATION_MESSAGE));
 
-        return price;
-    }
-
-    public String getISBN(){
-
-        //return JOptionPane.showInputDialog(null, "Please Enter ISBN: \n" , "Book ISBN",JOptionPane.INFORMATION_MESSAGE);
-
-        return ISBN;
-    }
-
-    public int getnumberOfPages(){
-
-        //return Integer.parseInt(JOptionPane.showInputDialog(null, "Please Enter the Number Of Pages: \n" , "Pages Of Book",JOptionPane.INFORMATION_MESSAGE));
-
-        return numberOfPages;
-    }
     //End of Accessor Method.
 
     //Beginning of Mutator method.
-    public void setTitle(String title){
+    public void setRecipient(String recipient){ this.recipient = recipient;}
 
-         if(title.equals("")) {
-             JOptionPane.showMessageDialog(null, "....", "Error", JOptionPane.ERROR_MESSAGE);
-             this.title = "No title";
-         }
-         else
-             this.title = title;
+    public void setSender(String sender){ this.sender = sender; }
+
+    public void setMessage(String message){this.message = message;}
+    //End of Mutator Method.
+
+    //Message email details.
+
+    public void emailAddress(String recipt, String sender){
+
+        setRecipient(recipt);
+        setSender(sender);
+
     }
 
-    public void setPrice(float price){
+    //Message append method.
+    public void appendMessage(String txt){
 
-        this.price = price;
+        this.message += txt;
+
     }
-
-    public void setISBN(String isbn){
-
-        this.ISBN = isbn;
-    }
-
-    public void setNumberOfPages(int nOP){
-
-        this.numberOfPages =nOP;
-    }//End of Mutator Method.
-
     public String toString(){
 
-         return   "Title: " + title + "\nPrice: " + price + "\nISBN: "  + ISBN + "\nNumber of pages: " + numberOfPages;
+         return   "From: " + sender + "\nTo: " + recipient + "\n"  + message ;
     }//End of toString Method which display the content of the object into string.
 
 
