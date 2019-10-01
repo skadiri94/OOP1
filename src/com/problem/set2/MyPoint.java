@@ -1,3 +1,5 @@
+
+/*
 package com.problem.set2;
 
 public class MyPoint {
@@ -47,3 +49,4 @@ public class MyPoint {
     }
 
 }
+*/
