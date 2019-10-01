@@ -6,6 +6,8 @@ public class FractionDriversClass {
 
     public static void main (String[]args){
 
+
+//Creating the fraction objects.
         Fraction frst = new Fraction(15,25);
         Fraction snd = new Fraction(10,20);
 
