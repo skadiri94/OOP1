@@ -39,6 +39,6 @@ public class Computer {
 
     public String toString(){
 
-        return String.format("%-25s%-25s%-25s%-25s\n\n%-25s%-25s%15.2f%15.2f","Brand","Type","Size","Value",brand,type,size,value);
+        return String.format("Brand: %s\nType: %s\nSize: %.0f\nValue: %.2f\n\n",brand,type,size,value);
     }
 }
