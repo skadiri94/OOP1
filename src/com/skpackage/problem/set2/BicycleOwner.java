@@ -12,36 +12,59 @@ import javax.swing.*;
 
 public class BicycleOwner {
 
-    public static void main(String[]args){
+    public static void main(String[] args) {
 
         JTextArea jta = new JTextArea("BICYCLE DETAILS\n");
 
 
-        Bicycle [] bicycles = new Bicycle[2];
-
+        Bicycle[] bicycles = new Bicycle[10];
+    int i=0;
 
         String owner, make;
         float value;
+        //int opt = Integer.parseInt());
 
-        for(int i=0; i<bicycles.length;i++){
+        while(JOptionPane.showConfirmDialog(null,"Would You Like to Add a Bicycle details?") == JOptionPane.YES_OPTION){
 
-           owner =  JOptionPane.showInputDialog(null,"Enter Owner's Name: ");
+            owner = JOptionPane.showInputDialog(null, "Enter Owner's Name: ");
 
-            make = JOptionPane.showInputDialog(null,"Enter Make: ");
+            make = JOptionPane.showInputDialog(null, "Enter Make: ");
 
-            value = Float.parseFloat(JOptionPane.showInputDialog(null,"Enter Value: "));
+            value = Float.parseFloat(JOptionPane.showInputDialog(null, "Enter Value: "));
 
-            bicycles[i] = new Bicycle(owner,make,value);
+            bicycles[i] = new Bicycle(owner, make, value);
+            i++;
+        }
+        float totalVal = 0;
+        String text = "";
+        System.out.print(i);
+
+       for (int j = 0; j < i; j++) {
+
+
+            text += bicycles[j].getOwnerName() + "\n";
+
+            totalVal += bicycles[j].getValue();
+
 
         }
 
-        for(int i=0; i<bicycles.length;i++){
+      /* for(Bicycle bk: bicycles){
 
-            jta.append(bicycles[i].toString() + "\n");
+           text += bk.getOwnerName() + "\n";
 
-        }
+           totalVal += bk.getValue();
+       }*/
 
-        JOptionPane.showMessageDialog(null,jta,"Bicycle Details",JOptionPane.INFORMATION_MESSAGE);
+        int count = Bicycle.getBikeCount();
+
+        System.out.println(Bicycle.getBikeCount());
+
+        jta.append(String.format("\nOwner Names: \n%-15s\n\nTotal Value: \n%.2f", text, totalVal));
+
+        jta.append(String.format("\n\nBicycle Count: %d", count));
+
+        JOptionPane.showMessageDialog(null, jta, "Bicycle Details", JOptionPane.INFORMATION_MESSAGE);
 
 
     }

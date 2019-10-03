@@ -11,15 +11,18 @@ public class Bicycle {
     private String ownerName;
     private String make;
     private float value;
+    private static  int bikeCount=0;
 
     public Bicycle(){
         this("Empty","Empty",0f);
+
     }
 
     public Bicycle(String ownerName, String make, float value){
         setOwnerName(ownerName);
         setMake(make);
         setValue(value);
+        bikeCount++;
 
     }
 
@@ -30,6 +33,11 @@ public class Bicycle {
     public String getOwnerName(){return ownerName;}
     public String getMake(){return make;}
     public float getValue(){return value;}
+
+    public static int getBikeCount(){
+        return bikeCount;
+
+    }
 
     public String toString(){
 

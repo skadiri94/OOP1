@@ -6,6 +6,7 @@ public class Fraction {
     private int denominator;
 
 
+
     public Fraction(){
 
         this(0,1);
