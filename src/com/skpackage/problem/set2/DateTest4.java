@@ -11,7 +11,7 @@ public class DateTest4 {
       // capture today's date
       today = new GregorianCalendar();
       // set up the date of your birthday: nb year, month, day: and month counts from 0
-      birthday = new GregorianCalendar(1997,12,04);
+      birthday = new GregorianCalendar(1994,01,01);
       SimpleDateFormat f3 = new SimpleDateFormat("EEEE MMMM dd'th', yyyy");
       JOptionPane.showMessageDialog(
          null, "today is " + f3.format(today.getTime()) );

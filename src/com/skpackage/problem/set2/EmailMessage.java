@@ -12,13 +12,15 @@ public class EmailMessage {
        Message msg = new Message("Suleman Kadiri","Bleon Ashani");
 
        //msg.emailAddress("SK","BA");
-       msg.appendMessage("How are you doing Big man??");
+      // msg.appendMessage("How are you doing Big man??");
+        msg.setMessage("How are you doing Big man??");
+
 
         JOptionPane.showMessageDialog(null, msg.toString(),"My new Object", JOptionPane.INFORMATION_MESSAGE);
 
 
 
-        msg.appendMessage("I am doing great hope");
+        msg.appendMessage("\nI am doing great hope");
         JOptionPane.showMessageDialog(null, msg.toString(),"My new Object", JOptionPane.INFORMATION_MESSAGE);
 
     }
