@@ -8,18 +8,22 @@ public class VendingMachineDrivers {
 
         VendingMachine vDM = new VendingMachine();
 
-        vDM.insertToken(2);
-        vDM.insertToken(2);
-        vDM.insertToken(2);
+        vDM.insertToken();
 
-        JOptionPane.showMessageDialog(null,"Cans Of Soda are : "+ vDM.getCansCount() +"\n" +
-                                        "Amount of Tokens: " + vDM.getTokensCount(), "Vending Machine",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Cans Of Soda are : "+ vDM.getCansOfSoda() +"\n" +
+                "Amount of Tokens: " + vDM.getTokens(), "Vending Machine",JOptionPane.INFORMATION_MESSAGE);
 
-        vDM.insertToken(2);
-        vDM.insertToken(2);
+        vDM.insertToken();
+        vDM.insertToken();
 
-        JOptionPane.showMessageDialog(null,"Cans Of Soda are : "+ vDM.getCansCount() +"\n" +
-                "Amount of Tokens: " + vDM.getTokensCount(), "Vending Machine",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Cans Of Soda are : "+ vDM.getCansOfSoda() +"\n" +
+                                        "Amount of Tokens: " + vDM.getTokens(), "Vending Machine",JOptionPane.INFORMATION_MESSAGE);
+
+        vDM.insertToken();
+        vDM.insertToken();
+
+        JOptionPane.showMessageDialog(null,"Cans Of Soda are : "+ vDM.getCansOfSoda() +"\n" +
+                "Amount of Tokens: " + vDM.getTokens(), "Vending Machine",JOptionPane.INFORMATION_MESSAGE);
 
     }
 }
