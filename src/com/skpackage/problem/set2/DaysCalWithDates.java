@@ -25,7 +25,7 @@ public class DaysCalWithDates {
 
 
 
-       /* day = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter Date returned: "));
+        day = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter Date returned: "));
 
         mnth = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter Month returned: "));
 
@@ -37,13 +37,13 @@ public class DaysCalWithDates {
 
 
 
-        diff = rday - bday;*/
+        diff = rday - bday;
 
-       Date dt = new Date();
+       //Date dt = new Date();
 
       // int rday = dt.getTime();
 
-        System.out.println(dt);
+       System.out.println(diff);
 
 
     }
