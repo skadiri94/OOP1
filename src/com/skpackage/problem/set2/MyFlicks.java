@@ -28,7 +28,8 @@ public class MyFlicks {
 
         }
 
-        for (int j = 0; j < catalog.length; j++) System.out.println("\n" + catalog[j].toString());
+        //for (int j = 0; j < catalog.length; j++) System.out.println("\n" + catalog[j].toString());
+
 
         displayFilms(catalog);
 
@@ -37,12 +38,12 @@ public class MyFlicks {
 
     public static void displayFilms(Film[] a){
 
-        //int filmCount = Film.getFilmCount();
+        int filmCount = Film.getFilmCount();
 
         JTextArea jta = new JTextArea();
         jta.setText("Number of Films: " + "\n\n");
 
-        for(int i = 0; i < a.length; i ++){
+        for(int i = 0; i < 1; i ++){
 
             jta.append(a[i].toString() + "\n\n");
 
