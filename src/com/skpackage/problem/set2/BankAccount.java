@@ -1,30 +1,35 @@
 package com.skpackage.problem.set2;
 
 
-public class BankAccount {
+public abstract class BankAccount implements Transactable,Taxable {
 
     private String accNum;
-    private double balance;
     private Person customer;
 
     public BankAccount(){
-        this("Empty",0.0,"unknown name");
+        this("Empty","unknown name");
 
     }
 
 
-    public BankAccount(String accNum, double balance, String name){
+    public BankAccount(String accNum, String name){
 
         setAccNum(accNum);
-        setBalance(balance);
         customer = new Person(name);
     }
 
     public BankAccount(String accNum, double balance, Person cust){
 
         setAccNum(accNum);
-        setBalance(balance);
+        //setBalance(balance);
         setCustomer(cust);
+    }
+
+    public BankAccount(String accNum, double balance, String custName){
+
+        setAccNum(accNum);
+        //setBalance(balance);
+        setCustomer(new Person(custName));
     }
 
     public void setCustomer(Person customer) {
@@ -36,30 +41,36 @@ public class BankAccount {
         this.accNum = accNum;
     }
 
-    public void setBalance(double balance) {
+    /*public void setBalance(double balance) {
         this.balance = balance;
     }
-
+*/
     public String getAccNum() {
         return accNum;
     }
 
-    public double getBalance() {
+    /*public double getBalance() {
         return balance;
-    }
+    }*/
 
 
     public String toString(){
 
-        return String.format("Account Number: %s\nBalance:€ %.2f\nAccount Holder: %s",getAccNum(),getBalance(),customer);
+        return String.format("Account Number: %s\nAccount Holder: %s",getAccNum(),customer);
     }
 
-    public void lodgeToAccount(double money){
+
+
+    public abstract void lodgeToAccount(int money);
+
+
+
+    /*public void lodgeToAccount(double money){
 
         balance += money;
     }
 
     public void withdraw(double money){
         balance -= money;
-    }
+    }*/
 }

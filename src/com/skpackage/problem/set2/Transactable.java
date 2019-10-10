@@ -2,9 +2,9 @@ package com.skpackage.problem.set2;
 
 public interface Transactable {
 
-    public void lodgeToAccount();
+     void lodgeToAccount(int money);
 
-    public void withdraw();
+    public abstract void withdraw();
 }
 
 
