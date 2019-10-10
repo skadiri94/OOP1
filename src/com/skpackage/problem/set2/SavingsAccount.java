@@ -45,7 +45,7 @@ public class SavingsAccount extends BankAccount {
 
     public String toString(){
 
-        return super.toString();
+        return super.toString() + String.format("\nBalance: %.2f",balance);
     }
 
 }
