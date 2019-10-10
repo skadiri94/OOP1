@@ -23,7 +23,22 @@ public class BankAccountDriver {
 
             accBal = Double.parseDouble(JOptionPane.showInputDialog("Enter Account Balance: "));
 
-            newBankAccounts[i] = new BankAccount(accNum,accBal,newPerson[i]);
+            newBankAccounts[i] = new BankAccount(accNum, accBal, newPerson[i]) {
+                @Override
+                public void lodgeToAccount(double money) {
+
+                }
+
+                @Override
+                public void withdraw(double money) {
+
+                }
+
+                @Override
+                public double calcTax() {
+                    return 0;
+                }
+            };
 
             i++;
 

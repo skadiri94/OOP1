@@ -61,9 +61,11 @@ public abstract class BankAccount implements Transactable,Taxable {
 
 
 
-    public abstract void lodgeToAccount(int money);
+    public abstract void lodgeToAccount(double money);
 
+    public abstract void withdraw(double money);
 
+    public abstract double calcTax();
 
     /*public void lodgeToAccount(double money){
 

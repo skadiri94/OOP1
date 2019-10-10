@@ -28,9 +28,24 @@ public class SavingsAccount extends BankAccount {
         this.balance = balance;
     }
 
-    public void lodgeToAccount(int money){
+    public void lodgeToAccount(double money){
 
         balance += money;
+    }
+
+    public void withdraw(double money){
+        balance -= money;
+    }
+
+    public double calcTax(){
+
+        return this.balance -= (balance*0.10);
+
+    }
+
+    public String toString(){
+
+        return super.toString();
     }
 
 }
