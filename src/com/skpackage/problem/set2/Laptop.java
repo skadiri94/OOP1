@@ -7,7 +7,7 @@ public class Laptop {
 
     public Laptop(){
 
-        this('flase');
+        //this('flase');
     }
 
     public Laptop(boolean laptop){
