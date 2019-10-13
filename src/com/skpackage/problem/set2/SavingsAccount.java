@@ -3,7 +3,6 @@ package com.skpackage.problem.set2;
 public class SavingsAccount extends BankAccount {
 
 
-
     private double balance;
 
     public SavingsAccount(){

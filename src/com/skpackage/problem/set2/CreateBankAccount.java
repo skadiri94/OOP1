@@ -12,6 +12,5 @@ public class CreateBankAccount {
 
 
 System.exit(0);
-
     }
 }

@@ -1,6 +1,6 @@
 package com.skpackage.problem.set2;
 
-public class Q3Computer {
+public class Q3Computer implements  IDable{
 
     private String id;
     private String make;
@@ -9,6 +9,11 @@ public class Q3Computer {
     public Q3Computer(){
         this("Unknown ID","Unknown Make",0);
     }
+
+    public Q3Computer(String make){
+        this("Unknown ID",make,0);
+    }
+
 
     public Q3Computer(String id,String make,int memory){
 
@@ -41,10 +46,14 @@ public class Q3Computer {
         return memory;
     }
 
-    @Override
+
     public String toString() {
 
         return String.format("ID: %s\nMake: %s\nMemory %s",getId(),getMake(),getMemory());
+
+    }
+
+    public void setID(String Id){
 
     }
 }
