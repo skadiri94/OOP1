@@ -31,7 +31,7 @@ public class Laptop extends Q3Computer {
 
     public String toString(){
 
-        return super.toString() + "\n" + String.format("Touch Screen: %s",isTouchScreen());
+        return super.toString() + "\n" + String.format("Touch Screen: %s",booleanToString(isTouchScreen()));
     }
 
     public Laptop makeLaptop(){
@@ -40,6 +40,10 @@ public class Laptop extends Q3Computer {
         String make,type;
         int size, opt;
         boolean touchScreen = false;
+
+        String touchScreenAsS = "no";
+        //System.out.println(touchScreenAsS);
+
 
         String id = JOptionPane.showInputDialog(null,"Enter ID: ");
 
@@ -51,8 +55,10 @@ public class Laptop extends Q3Computer {
 
         opt = JOptionPane.showConfirmDialog(null,"Is it Touch Screen","Selection Option",JOptionPane.YES_NO_OPTION);
 
-        if(opt == JOptionPane.YES_OPTION)
+        if(opt == JOptionPane.YES_OPTION) {
             touchScreen = true;
+            touchScreenAsS = "yes";
+        }
         //else
         //    touchScreen = false;
 
@@ -60,6 +66,10 @@ public class Laptop extends Q3Computer {
 
         return  laptop;
 
+    }
+
+    public String booleanToString(boolean b) {
+        return b ? "Yes" : "No";
     }
 
 
