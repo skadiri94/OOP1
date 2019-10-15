@@ -7,17 +7,22 @@ public class Q3ComputerDrivers {
 
     public static void main(String[] args) {
 
-            Laptop comp1 = new Laptop("Dell","SSD",500,true);
-            Q3Computer comp2 = new Q3Computer("Asus","DDR",250);
+            Laptop comp1 = new Laptop("12345","Dell","SSD",500,true);
+            Q3Computer comp2 = new Q3Computer("564564","Asus","DDR",250);
 
         ArrayList<Q3Computer> computers = new ArrayList<Q3Computer>();
 
-        //computer.makeLaptop();
+        Laptop comp3 = new Laptop();
+
+        comp3 = comp3.makeLaptop();
+
+
 
         System.out.println(comp1.toString());
 
         computers.add(comp1);
         computers.add(comp2);
+        computers.add(comp3);
 
         JOptionPane.showMessageDialog(null,computers.toString(),"Computer details",JOptionPane.INFORMATION_MESSAGE);
 

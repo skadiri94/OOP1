@@ -7,19 +7,19 @@ public class Q3Computer implements  IDable{
     protected Memory memory;
 
     public Q3Computer(){
-        this("Unknown ID","Unknown Make",0);
+        this("Unknown ID","Unknown Make","unknown type",0);
     }
 
     public Q3Computer(String make){
-        this("Unknown ID",make,0);
+        this("no id","Unknown ID",make,0);
     }
 
 
-    public Q3Computer(String id,String make,int memory){
+    public Q3Computer(String id,String make,String type,int memory){
 
         setId(id);
         setMake(make);
-        setMemory(new Memory(memory));
+        setMemory(new Memory(type,memory));
     }
 
     public void setId(String id) {

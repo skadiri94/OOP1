@@ -9,13 +9,14 @@ public class Laptop extends Q3Computer {
 
     public Laptop(){
 
-        this("Unknown Type","Unknown Type",0,false);
+        this("Unknown ID","Unknown Type","Unknown Type",0,false);
     }
 
-    public Laptop(String make, String type, int size, boolean touchScreen){
-
-        setMake(make);
-        setMemory(new Memory(type,size));
+    public Laptop(String id, String make, String type, int size, boolean touchScreen){
+        super(id,make,type,size);
+        //setId(id);
+        //setMake(make);
+       // setMemory(new Memory(type,size));
         setTouchScreen(touchScreen);
 
     }
@@ -40,6 +41,8 @@ public class Laptop extends Q3Computer {
         int size, opt;
         boolean touchScreen = false;
 
+        String id = JOptionPane.showInputDialog(null,"Enter ID: ");
+
         make = JOptionPane.showInputDialog(null,"Enter Make: ");
 
         type = JOptionPane.showInputDialog(null,"Enter type: ");
@@ -50,10 +53,10 @@ public class Laptop extends Q3Computer {
 
         if(opt == JOptionPane.YES_OPTION)
             touchScreen = true;
-        else
-            touchScreen = false;
+        //else
+        //    touchScreen = false;
 
-        laptop = new Laptop(make,type,size,touchScreen);
+        laptop = new Laptop(id,make,type,size,touchScreen);
 
         return  laptop;
 

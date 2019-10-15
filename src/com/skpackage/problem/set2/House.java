@@ -15,7 +15,7 @@ public class House {
 
         setAddress(address);
         setType(type);
-        setPrice(validPrice(price));
+        setPrice(price);
         owner = new Person(name);
     }
 
@@ -28,7 +28,10 @@ public class House {
     }
 
     public void setPrice(double price) {
-        this.price = price;
+
+        validPrice(price);
+        System.out.println("Price is now " + price);
+        //this.price = price;
     }
 
     public void setOwner(Person owner) {
@@ -51,14 +54,18 @@ public class House {
         return owner;
     }
 
-    public double validPrice(double price) {
+    public void validPrice(double price) {
 
-        if (price > Double.MIN_VALUE)
+        System.out.println("Price is now " + price);
+        if (price < Double.MAX_VALUE && price>=0)
             this.price = price;
-        else
-            price = this.price;
 
-        return price;
+        System.out.println("Argument price is now " + price);
+        System.out.println("Attribute price is now " + this.price);
+        //else
+        //    price = this.price;
+
+       // return this.price;
     }
 
     public String toString() {
