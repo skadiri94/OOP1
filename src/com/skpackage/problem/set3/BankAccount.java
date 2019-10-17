@@ -1,8 +1,7 @@
-package com.skpackage.problem.set2;
+package com.skpackage.problem.set3;
 
 
-import com.skpackage.problem.set3.Taxable;
-import com.skpackage.problem.set3.Transactable;
+import com.skpackage.problem.set2.Person;
 
 public abstract class BankAccount implements Transactable, Taxable {
 

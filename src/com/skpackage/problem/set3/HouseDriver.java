@@ -1,4 +1,4 @@
-package com.skpackage.problem.set2;
+package com.skpackage.problem.set3;
 
 public class HouseDriver {
 

@@ -1,4 +1,6 @@
-package com.skpackage.problem.set2;
+package com.skpackage.problem.set3;
+
+import com.skpackage.problem.set2.BankAccount;
 
 public class SavingsAccount extends BankAccount {
 
