@@ -8,7 +8,7 @@ public class Q3ComputerDrivers {
     public static void main(String[] args) {
         JTextArea jta = new JTextArea("Computer Details\n\n");
 
-            Laptop comp1 = new Laptop("12345","Dell","SSD",500,true);
+        Q3Computer comp1 = new Laptop("12345","Dell","SSD",500,true);
             Q3Computer comp2 = new Q3Computer("564564","Asus","DDR",250);
 
         ArrayList<Q3Computer> computers = new ArrayList<Q3Computer>();

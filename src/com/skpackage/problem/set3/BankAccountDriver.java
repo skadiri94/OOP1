@@ -3,46 +3,36 @@ package com.skpackage.problem.set3;
 import com.skpackage.problem.set2.Person;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class BankAccountDriver {
     public static void main(String[] args) {
 
-        int i=0;
+        //int i = 0;
 
-        BankAccount[] newBankAccounts = new BankAccount[10];
-        Person [] newPerson = new Person[10];
-        String name,accNum;
+        //SavingsAccount[] newBankAccounts = new SavingsAccount[2];
+
+        ArrayList<SavingsAccount> newBankAccounts = new ArrayList<>();
+        //Person [] newPerson = new Person[2];
+        String name, accNum;
         double accBal;
 
 
-        while(JOptionPane.showConfirmDialog(null,"Creat a New Bank Account")==JOptionPane.YES_OPTION)
-        {
-            name = JOptionPane.showInputDialog(null,"Enter Account Holder Name:");
+        while (JOptionPane.showConfirmDialog(null, "Creat a New Bank Account") == JOptionPane.YES_OPTION) {
+            name = JOptionPane.showInputDialog(null, "Enter Account Holder Name:");
 
-            newPerson[i] = new Person(name);
+            // newPerson[i] = new Person(name);
 
-            accNum = JOptionPane.showInputDialog(null,"Enter Account Number: ");
+            accNum = JOptionPane.showInputDialog(null, "Enter Account Number: ");
 
             accBal = Double.parseDouble(JOptionPane.showInputDialog("Enter Account Balance: "));
 
-            newBankAccounts[i] = new BankAccount(accNum, accBal, newPerson[i]) {
-                @Override
-                public void lodgeToAccount(double money) {
+            newBankAccounts.add(new SavingsAccount(accBal, accNum, name));
 
-                }
 
-                @Override
-                public void withdraw(double money) {
 
-                }
 
-                @Override
-                public double calcTax() {
-                    return 0;
-                }
-            };
-
-            i++;
+           // i++;
 
         }
 
@@ -50,13 +40,20 @@ public class BankAccountDriver {
         String bAcc = "";
 
 
-        for (int j = 0; j < i; j++) {
+        //for (int j = 0; j < i; j++)
 
+        for(SavingsAccount bk: newBankAccounts){
 
-            bAcc += newBankAccounts[j].toString() + "\n\n\n";
+            //h++;
+           // bAcc += newBankAccounts.toString();
+           // bAcc += newBankAccounts[bk]
+
+            bAcc += bk.toString() + "\n\n\n";
 
 
         }
+
+        System.out.println(bAcc);
 
 
         JOptionPane.showMessageDialog(null, bAcc, "Bank Details",JOptionPane.INFORMATION_MESSAGE);
@@ -64,3 +61,21 @@ public class BankAccountDriver {
 
     }
 }
+/*
+@Override
+public void lodgeToAccount(double money) {
+
+        }
+
+@Override
+public void withdraw(double money) {
+
+        }
+
+@Override
+public double calcTax() {
+        return 0;
+        }
+
+ */
+

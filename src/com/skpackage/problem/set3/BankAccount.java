@@ -20,7 +20,7 @@ public abstract class BankAccount implements Transactable, Taxable {
         customer = new Person(name);
     }
 
-    public BankAccount(String accNum, double balance, Person cust){
+    public BankAccount(String accNum, Person cust){
 
         setAccNum(accNum);
         //setBalance(balance);
@@ -43,7 +43,7 @@ public abstract class BankAccount implements Transactable, Taxable {
         this.accNum = accNum;
     }
 
-    /*public void setBalance(double balance) {
+   /* public void setBalance(SavingsAccount balance) {
         this.balance = balance;
     }
 */
