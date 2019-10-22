@@ -21,6 +21,7 @@ public class Student extends Person implements Hugable,Kissable{
 	     //setGender(gender);
 	     setStudentNumber(snum);
 	     setCourse(c);
+
   }
 
   public String getStudentNumber(){

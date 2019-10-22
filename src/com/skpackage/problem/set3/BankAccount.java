@@ -39,6 +39,7 @@ public abstract class BankAccount implements Transactable, Taxable {
     }
 
 
+
     public void setAccNum(String accNum) {
         this.accNum = accNum;
     }
